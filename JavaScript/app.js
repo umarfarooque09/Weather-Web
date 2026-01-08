@@ -98,7 +98,7 @@ function getWeather() {
 }
 
 document.getElementById("cityInput").addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    getWeather();
-  }
+    if (e.key === "Enter") {
+        getWeather();
+    }
 });

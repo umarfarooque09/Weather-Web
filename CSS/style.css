@@ -1,18 +1,16 @@
-/* 🌐 RESET */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* 🌤 BASE */
 body {
     font-family: "Poppins", Arial, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-/* 🌥 BACKGROUND */
 .background {
     position: relative;
     min-height: 100vh;
@@ -20,7 +18,6 @@ body {
     overflow: hidden;
 }
 
-/* ☁️ SKY IMAGE */
 .background::before {
     content: "";
     position: absolute;
@@ -30,27 +27,25 @@ body {
     pointer-events: none;
 }
 
-/* 🌧 RAIN */
 .rain {
     position: fixed;
     inset: 0;
-    background-image: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.35) 0,
-        rgba(255,255,255,0.35) 1px,
-        transparent 1px,
-        transparent 6px
-    );
+    background-image: repeating-linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.35) 0,
+            rgba(255, 255, 255, 0.35) 1px,
+            transparent 1px,
+            transparent 6px);
     animation: rainFall 0.45s linear infinite;
     display: none;
     pointer-events: none;
 }
 
 @keyframes rainFall {
-    to { background-position: 0 120px; }
+    to {
+        background-position: 0 120px;
+    }
 }
 
-/* ⚡ LIGHTNING */
 .lightning {
     position: fixed;
     inset: 0;
@@ -62,18 +57,30 @@ body {
 }
 
 @keyframes lightningFlash {
-    0%, 94%, 100% { opacity: 0; }
-    95% { opacity: 0.5; }
-    96% { opacity: 0; }
-    97% { opacity: 0.35; }
+
+    0%,
+    94%,
+    100% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0.5;
+    }
+
+    96% {
+        opacity: 0;
+    }
+
+    97% {
+        opacity: 0.35;
+    }
 }
 
-/* 🌥 GLASS CARDS */
 .weather-card,
 .forecast-card,
 .search-card {
     backdrop-filter: blur(20px);
-    /* background: rgba(255, 255, 255, 0.75); */
     background: transparent;
     border-radius: 22px;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -83,7 +90,6 @@ body {
     text-align: center;
 }
 
-/* 🎞 ENTRY ANIMATION */
 .search-card {
     width: 100%;
     max-width: 380px;
@@ -95,13 +101,13 @@ body {
         transform: translatex(-400px);
         opacity: 0;
     }
+
     to {
         transform: translatex(0);
         opacity: 1;
     }
 }
 
-/* ☀️ FORECAST HOVER */
 .forecast-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -111,12 +117,11 @@ body {
     box-shadow: 0 25px 55px rgba(0, 0, 0, 0.28);
 }
 
-/* 🌤 ICONS */
 #weatherIcon,
 .forecast-icon {
     width: 85px;
     margin-bottom: 10px;
-    filter: drop-shadow(0 8px 14px rgba(0,0,0,0.25));
+    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25));
     transition: transform 0.3s ease;
 }
 
@@ -124,13 +129,13 @@ body {
     transform: scale(1.15);
 }
 
-/* 📝 TEXT */
 #heading {
     font-weight: 600;
     color: #1e3a8a;
 }
 
-h2, h5 {
+h2,
+h5 {
     color: #1f3c88;
 }
 
@@ -138,7 +143,6 @@ p {
     color: #2f2f2f;
 }
 
-/* 🔎 INPUT */
 #cityInput {
     border-radius: 14px;
     border: 1px solid #c7d2fe;
@@ -146,7 +150,6 @@ p {
     font-size: 15px;
 }
 
-/* 🔘 BUTTON */
 .btn-weather {
     background: linear-gradient(135deg, #38bdf8, #2563eb);
     color: #fff;
@@ -163,7 +166,6 @@ p {
     box-shadow: 0 12px 24px rgba(37, 99, 235, 0.4);
 }
 
-/* 📱 CENTER CONTENT */
 .container {
     min-height: 100vh;
     display: flex;
@@ -172,22 +174,21 @@ p {
 }
 
 @media (max-width: 600px) {
-    
-  .background {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-}
-    /* ☁️ SKY IMAGE */
-.background::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("../Assets/Image/ForSmallScreens.png")
-    top center / cover no-repeat;
-    opacity: 0.45;
-    pointer-events: none;
-}
+
+    .background {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .background::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("../Assets/Image/ForSmallScreens.png") top center / cover no-repeat;
+        opacity: 0.45;
+        pointer-events: none;
+    }
 
 }
