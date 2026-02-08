@@ -22,7 +22,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../Assets/Image/ForBigScreens.png")top center / cover no-repeat;
+    background: url("ForBigScreens.png")top center / cover no-repeat;
     opacity: 0.45;
     pointer-events: none;
 }
@@ -186,7 +186,7 @@ p {
         content: "";
         position: absolute;
         inset: 0;
-        background: url("../Assets/Image/ForSmallScreens.png") top center / cover no-repeat;
+        background: url("ForSmallScreens.png") top center / cover no-repeat;
         opacity: 0.45;
         pointer-events: none;
     }
